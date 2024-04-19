@@ -1,0 +1,33 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+}
+
+.header {
+    height: 6vh;
+    width: 75vw;
+    border: 1px solid black;
+
+}
+
+.sidebar-nav {
+    height: 100vh;
+    width: 25vw;
+    border: 1px solid black;
+}
+
+.main-content {
+    border: 1px solid black;
+    height: 94vh;
+    width: 75vw;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}

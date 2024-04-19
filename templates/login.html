@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    
+  </head>
+  <body>
+    <div class="cloud-container">
+      <div class="cloud"></div>
+    </div>
+    <div class="login-page">
+        <div class="login-form">
+            <div class="login-icon">
+                <img src="/static/img/login_logo.png" >
+            </div>
+            <div class="login-inputs">
+                <form method="POST" action="/login/">
+
+                    <input class="uname-input" required type="text" name="username" placeholder=" Username" value="{{.Username}}"><br>
+                    <input class="pword-input" required type="password" name="password" placeholder=" Password" value="{{.Password}}"><br>
+                    
+                    <button class="login-btn" type="submit">LOGIN</button>
+              
+                </form>
+              
+                {{if .ErrExists}}
+                <p>
+                <br><b style="color:red">{{.Err}}</b><br>
+                </p>
+                {{end}}
+
+            </div>
+            
+        </div>
+    </div>
+    
+  </body>
+</html>
