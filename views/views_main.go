@@ -9,30 +9,6 @@ import (
 
 // MainHandler is the main handler for the login system.
 func MainHandler(w http.ResponseWriter, r *http.Request) {
-
-	// 	r.URL.Path = strings.TrimPrefix(r.URL.Path, "/")
-	// 	path := strings.TrimSuffix(r.URL.Path, "/")
-
-	// 	uadmin.Trail(uadmin.DEBUG, "Path: %s", path)
-	// 	// session := uadmin.IsAuthenticated(r)
-
-	// 	switch path {
-	// 	case "login":
-	// 		LoginHandler(w, r)
-	// 	case "dashboard":
-	// 		DashboardHandler(w, r)
-	// 	case "company_details":
-	// 		CompanyHandler(w, r)
-	// 	case "images":
-	// 		ImagesHandler(w, r)
-	// 	case "user_management":
-	// 		UserManagementHandler(w, r)
-	// 	case "logout":
-	// 		LogoutHandler(w, r)
-	// 	default:
-	// 		w.Write([]byte("Not Found"))
-	// 	}
-	// }
 	r.URL.Path = strings.TrimPrefix(r.URL.Path, "/")
 	page := strings.TrimPrefix(r.URL.Path, "/")
 	session := uadmin.IsAuthenticated(r)

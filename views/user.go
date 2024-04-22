@@ -12,7 +12,7 @@ func UserManagementHandler(w http.ResponseWriter, r *http.Request) map[string]in
 	c := map[string]interface{}{}
 
 	// Initialize Title and mapped it on the html file (you can check it if you want :)
-	c["Title"] = "User Management | Page"
+	c["Title"] = "User Management"
 
 	// tells the handler that it will load to this path
 	r.URL.Path = strings.TrimPrefix(r.URL.Path, "/user_management")

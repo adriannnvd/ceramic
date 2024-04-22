@@ -12,7 +12,7 @@ func CompanyHandler(w http.ResponseWriter, r *http.Request) map[string]interface
 	c := map[string]interface{}{}
 
 	// Initialize Title and mapped it on the html file (you can check it if you want :)
-	c["Title"] = "Company Details | Page"
+	c["Title"] = "Company Details"
 
 	// tells the handler that it will load to this path
 	r.URL.Path = strings.TrimPrefix(r.URL.Path, "/company_details")

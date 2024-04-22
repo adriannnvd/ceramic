@@ -8,7 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{.Title}}</title>
   {{ template "style" . }}
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/dashboard.css">
+  <link rel="stylesheet" href="/static/css/user.css">
+
+
 
 </head>
 
@@ -16,35 +22,39 @@
     <div class="container"> 
         <div class="wrapper1">
             <div class="sidebar-nav">
-                <div class="nav-logo">
-                    <img src="">
+                <div class="sidenav1">
+                    <div class="nav-logo">
+                        <!-- <img src="" alt="Logo" style="color: white;" width="25" height="25"> -->
+                        <p>Logo</p>
+                    </div>
+                    <div class="sidebar-buttons" id="side-buttons">
+                        <ul>
+                            <li><a class="side-btn active" href="/dashboard" id="dashboard"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+                            <li><a class="side-btn" href="/company" id="company"><i class='bx bxs-detail' ></i>Company Details</a></li>
+                            <li><a class="side-btn" href="/images" id="images"><i class='bx bx-images' ></i>Images</a></li>
+                            <li><a class="side-btn" href="/user" id="user"><i class='bx bxs-user-account'></i>User Management</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="sidebar-buttons">
-            
-                    <ul>
-                        <li><button class="dashboard-dropdown">Dashboard
-                            <i class="fa fa-caret-down"></i>
-                          </button>
-                          <div class="dropdown-container">
-                            <a href="/dashboard">Default</a>
-                            <a href="/company">Company Details</a>
-                          </div>
-                        </li>
-                        <li><a href="/images">Images</a></li>
-                        <li><a href="/user">User Management</a></li>
-                    </ul>
-
-                    <div class="logout">
+                <div class="sidenav2">
+                    <div class="logout" >
                         <form method="GET" action="/logout/">
-                            <button class="logout-btn" type="submit" onclick="handleLogout()">LOGOUT</button>
+                            <button class="logout-btn" type="submit" ><i class='bx bx-log-out'></i> Logout</button>
                         </form>
                     </div>
                 </div>
+                
             </div>
         </div>
         <div class="wrapper2">
             <div class="header">
-            
+                <div class="header1">
+                    <h1 class="title bold">{{.Title}}</h1>  
+                </div>
+                <div class="header2">
+                    <img class="profile" src="/static/images/user-boy.png" >
+                    <p class="bold">User</p>
+                </div>  
             </div>
             <div class="main-content" id="main">
                 {{ template "content" . }}
@@ -59,10 +69,11 @@
 
   {{ template "script" . }}
 
-  {{ define "style" }}{{ end }}
+  {{ define "style" }} {{ end }}
 
-  {{ define "script" }}{{ end }}
-
+  {{ define "script" }} {{ end }}
+  
+  <script src="/static/js/base.js"></script>
 </body>
 
 </html>

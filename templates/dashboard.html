@@ -4,6 +4,119 @@
 {{end}}
 {{define "content"}}
 
-<h1>DASHBOARD PAGE</h1>
+<div class="dashboard">
+    <div class="sec1">
+        <div class="total">
+            <div class="data">
+                <div class="data1">
+                    <div class="t-line"></div>
+                </div>
+                <div class="data2">
+                    <p class="total-label bold">Total</p>
+                    <p class="total-num">1000</p>
+                </div> 
+            </div>
+            <div class="icon">
+                <i class='bx bxs-pie-chart-alt-2 total-icon' ></i>   
+            </div>
+        </div>
+        <div class="good">
+            <div class="data">
+                <div class="data1">
+                    <div class="g-line"></div>
+                </div>
+                <div class="data2">
+                    <p class="good-label bold">Good</p>
+                    <p class="good-num">500</p>
+                </div> 
+            </div>
+            <div class="icon">
+                <i class='bx bx-happy-heart-eyes good-icon' ></i>
+            </div>
+        </div>
+        <div class="defect">
+            <div class="data">
+                <div class="data1">
+                    <div class="d-line"></div>
+                </div>
+                <div class="data2">
+                    <p class="defect-label bold">Defect</p>
+                    <p class="defect-num">500</p>
+                </div> 
+            </div>
+            <div class="icon">
+                <i class='bx bx-sad defect-icon' ></i>   
+            </div>
+        </div>
+    </div>
+    <div class="sec2">
+        <div class="recent-upload">
+            <div class="upload-label">
+                <p class="label"><span class="bold">Recent Upload</span></p>
+                <a class="add-image-icon" href="/images"><i class='bx bx-image-add add-image-icon'></i></a>
+            </div>
+            <div class="pic-upload">
+                <img class="plate-pic" src="" alt="IMAGE HERE" >
+            </div>
+            <div class="date-upload">
+                <p class="plate-date"><span class="bold">Date Uploaded: </span>May 18, 2002</p>
+            </div>
+            <div class="classification">
+                <p class="plate-class"><span class="bold">Classification:</span> Good</p>
+            </div>
+        </div>
+        <div class="graph"></div>
+    </div>
+    <div class="sec3 table">
+        <div class="user-list ">
+            <div class="user-label head">
+                <p class="label"><span class="bold">Users</span></p>
+                <a class="add-image-icon" href="/user"><i class='bx bxs-user-plus' ></i></a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Photo</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Authority</th>
+                        <th>Reset Password</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range .Users }}
+                    <tr>
+                        <td>{{ .ID }}</td>
+                        <td>
+                            <img src="{{ .Photo }}">
+                        </td>
+                        <td>{{ .Username }}</td>
+                        <td>{{ .Email }}</td>
+                        <td>{{ .FirstName }}</td>
+                        <td>{{ .LastName }}</td>
+                        <!-- <td style = "{{if .Admin}}color: #FA896B;{{else}}color: #52C1FF;{{end}}"> -->
+                        <td>
+                           {{if .Admin}}
+                                Admin
+                            {{else}}
+                                Regular
+                            {{end}} 
+                        </td> 
+                        <td>
+                            <a href="#" class="btn-download btn-reset">
+                                <i class='bx bx-reset' ></i>
+                                <span class="text">Reset Password</span>
+                            </a>
+                        </td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
 {{end}}
