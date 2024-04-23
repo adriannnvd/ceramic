@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+div {
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px 0;
+}
+
+/* SECTION 1 DASHBOARD */
+.sec1 {
+    height: 130px;
+    width: 72vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+ 
+.total, .good, .defect {
+    height: 130px;
+    width: 255px;
+    border-radius: 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+     
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.icon {
+    height: 75px;
+    width: 75px;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total {
+    background-color: #1a1e2f;
+}
+
+.t-line {
+    border: 2px solid #e2e3e6;
+    height: 4rem;
+    border-radius: 3px;
+}
+.total-label {
+    font-size: 1rem;
+    color: #e2e3e6;
+}
+.total-num {
+    font-size:  2rem;
+    color: #ffffff;
+}
+.total-icon {
+    color: #e2e3e6;
+    font-size: 3.5rem;  
+}
+
+.good, .defect{
+    background-color: #e2e3e6;
+}
+.g-line, .d-line {
+    border: 2px solid #1a1e2f;
+    height: 4rem;
+    border-radius: 3px;
+}
+.good-label, .defect-label {
+    font-size: 1rem;
+    color: #1a1e2f;
+}
+.good-num, .defect-num {
+    font-size:  2rem;
+}
+.good-icon, .defect-icon {
+    color: #1a1e2f;
+    font-size: 3.5rem;  
+}
+
+/* SECTION 2 DASHBOARD */
+.sec2 {
+    height: 327px;
+    width: 72vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recent-upload {
+    height: 327px;
+    width: 300px;
+    border-radius: 15px;  
+    background-color: #e2e3e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.upload-label {
+    height: 30px;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.pic-upload {
+    border: 1px black solid;
+    height: 200px;
+    width: 280px;
+    margin: 10px;
+}
+.plate-pic {
+    height: 200px;
+    width: 280px;  
+}
+.add-image-icon {
+    text-decoration: none;
+    color: #1a1e2f;
+}
+.date-upload {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.classification {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+
+.graph {
+    height: 327px;
+    width: 477px;
+    border-radius: 15px; 
+    background-color: #ffffff; 
+
+}
+
+/* SECTION 3 DASHBOARD */
+.sec3 {
+    height: 250px;
+    width: 72vw;
+}
+
+.user-list {
+    height: 250px;
+    width: 72vw;
+    border-radius: 15px;  
+    background-color: #e2e3e6;
+}
+.user-label {
+    height: 30px;
+    width: 72vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 0 10px;
+}
+
+.dashboard-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.dash-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    min-width: 1000px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+
+.dash-table thead tr {
+    background-color: #1a1e2f;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.dash-table th, 
+.dash-table td {
+    padding: 9px 10px;
+}
+
+.dash-table tbody tr {
+    border-bottom: 2px solid #1a1e2f;
+    
+}
