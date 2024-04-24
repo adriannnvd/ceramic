@@ -30,7 +30,7 @@
       "Choices": {}
     },
     "Name": {
-      "display_name": "Classification",
+      "display_name": "Name",
       "help": "",
       "pattern_msg": "",
       "err_msg": {},

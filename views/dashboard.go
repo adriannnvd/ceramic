@@ -4,12 +4,30 @@ import (
 	"net/http"
 	"strings"
 
-	// "github.com/uadmin/uadmin"
+	"github.com/adriannnvd/ceramic/models"
+	"github.com/uadmin/uadmin"
 )
 
 // Handler is used to handle/load pages
 func DashboardHandler(w http.ResponseWriter, r *http.Request) map[string]interface{} {
 	c := map[string]interface{}{}
+	users := []uadmin.User{}
+	ceramic := []models.Ceramic{}
+
+	uadmin.All(&users)
+	for x := range users {
+		uadmin.Preload(&users[x])
+	}
+	c["Users"] = users
+
+	total := uadmin.Count(ceramic, "id > 0")
+	c["Total"] = total
+
+	totalGood := uadmin.Count(ceramic, "classification == 1")
+	c["TotalGood"] = totalGood
+	totalDefect := uadmin.Count(ceramic, "classification == 2")
+	c["TotalDefect"] = totalDefect
+
 
 	// Initialize Title and mapped it on the html file (you can check it if you want :)
 	c["Title"] = "Dashboard"
