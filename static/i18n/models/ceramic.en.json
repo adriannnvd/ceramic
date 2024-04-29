@@ -8,6 +8,13 @@
       "err_msg": {},
       "Choices": {}
     },
+    "ClassificationNum": {
+      "display_name": "Classification Num",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
     "Date": {
       "display_name": "Date Uploaded",
       "help": "",

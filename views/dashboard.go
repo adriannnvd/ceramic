@@ -20,12 +20,19 @@ func DashboardHandler(w http.ResponseWriter, r *http.Request) map[string]interfa
 	}
 	c["Users"] = users
 
+	uadmin.All(&ceramic)
+	uadmin.AdminPage("id", false, -1, 1, &ceramic, "")	
+	for x := range ceramic {
+		uadmin.Preload(&ceramic[x])
+	}
+	c["Ceramic"] = ceramic
+
 	total := uadmin.Count(ceramic, "id > 0")
 	c["Total"] = total
 
-	totalGood := uadmin.Count(ceramic, "classification == 1")
+	totalGood := uadmin.Count(ceramic, "classification_num == 1")
 	c["TotalGood"] = totalGood
-	totalDefect := uadmin.Count(ceramic, "classification == 2")
+	totalDefect := uadmin.Count(ceramic, "classification_num == 2")
 	c["TotalDefect"] = totalDefect
 
 

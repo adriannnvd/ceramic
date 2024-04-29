@@ -55,15 +55,21 @@
                 <p class="label"><span class="bold">Recent Upload</span></p>
                 <a class="add-image-icon" href="/images"><i class='bx bx-image-add add-image-icon'></i></a>
             </div>
+            {{ range .Ceramic}}
             <div class="pic-upload">
                 <img class="plate-pic" src="/static/images/good/good1.jpg" alt="IMAGE HERE" >
             </div>
             <div class="date-upload">
-                <p class="plate-date"><span class="bold">Date Uploaded: </span>May 18, 2002</p>
+                <p class="plate-date"><span class="bold">Date Uploaded:</span> {{ .Date.Format "January 2, 2006 at 15:04" }}
+                
             </div>
             <div class="classification">
-                <p class="plate-class"><span class="bold">Classification:</span> Good</p>
+                <p class="plate-class"><span class="bold">Classification:</span>{{ if eq .ClassificationNum 1}} <p class="green">Good</p> 
+                {{else}} <p class="red">Defected </p> 
+                {{end}}
             </div>
+            {{end}}
+            
         </div>
         <div class="graph">
             <div class="graph-label">

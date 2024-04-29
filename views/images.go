@@ -6,7 +6,6 @@ import (
 
 	"github.com/adriannnvd/ceramic/models"
 	"github.com/uadmin/uadmin"
-	// "github.com/uadmin/uadmin"
 )
 
 // Handler is used to handle/load pages

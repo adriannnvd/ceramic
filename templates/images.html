@@ -5,10 +5,31 @@
 {{define "content"}}
 
 <div class="images">
+    <form action="/api/addimage/" method="POST" enctype="multipart/form-data" class="file-upload-form" id="uploadForm" style="display: none;">
+        <div class="upload-files-container">
+            <div class="drag-file-area">
+                <!-- <i class='bx bx-cloud-upload'></i> -->
+                <span class="material-icons-outlined upload-icon"></span>
+                <h3 class="dynamic-message"> Drag & drop your image here </h3>
+                <label class="label"> or <span class="browse-files"> <input type="file" name="photo" class="default-file-input" id="file" />
+                        <span class="browse-files-text browse-button">browse file</span> <span>from device</span> </span> </label>
+            </div>
+            <span class="cannot-upload-message"> <span class="material-icons-outlined">error</span> Please select a file
+                first <span class="material-icons-outlined cancel-alert-button">cancel</span> </span>
+            <div class="file-block">
+                <div class="file-info"> <span class="material-icons-outlined file-icon">description</span> <span
+                        class="file-name"> </span> | <span class="file-size"> </span> </div>
+                <span class="material-icons remove-file-icon">delete</span>
+                <div class="progress-bar"> </div>
+            </div>
+            <button type="button" class="upload-button"> Upload </button>
+            <button type="submit" class="upload-button"> Save </button>
+        </div>
+    </form>
     <div class="images-list ">
         <div class="image-label">
             <h2 class="label"><span class="bold">Upload Images</span></h2>
-            <button class="upload-img">
+            <button class="upload-img" id="uploadBtn">
                 <i class='bx bx-upload' ></i>
                 <span>Upload</span>
             </button>
@@ -28,7 +49,7 @@
                         <td>
                             <img class="ceramic-image" src="{{ .Image }}" >
                         </td>
-                        <td>{{ if eq .Classification 1}} <p class="green">Good</p> 
+                        <td>{{ if eq .ClassificationNum 1}} <p class="green">Good</p> 
                             {{else}} <p class="red">Defected </p>
                             {{end}}
                         </td>
