@@ -4,6 +4,41 @@
 {{end}}
 {{define "content"}}
 
-<h1>IMAGES PAGE</h1>
-
+<div class="images">
+    <div class="images-list ">
+        <div class="image-label">
+            <h2 class="label"><span class="bold">Upload Images</span></h2>
+            <button class="upload-img">
+                <i class='bx bx-upload' ></i>
+                <span>Upload</span>
+            </button>
+        </div>
+        <div class="image-table">
+            <table class="image-list-table">
+                <thead>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Classification</th>
+                        <th>Date Uploaded</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range .Ceramic }}
+                    <tr>
+                        <td>
+                            <img class="ceramic-image" src="{{ .Image }}" >
+                        </td>
+                        <td>{{ if eq .Classification 1}} <p class="green">Good</p> 
+                            {{else}} <p class="red">Defected </p>
+                            {{end}}
+                        </td>
+                        <td>{{ .Date.Format "January 2, 2006 at 15:04" }}</td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>
 {{end}}

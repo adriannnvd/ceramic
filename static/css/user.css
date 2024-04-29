@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.user-management {
+    height: 100%;
+    padding: 10px;
+}
+
+.user-management-list {
+    padding-top: 10px;
+    height: 765px;
+    max-height: 765px;
+    background-color: #e2e3e6;
+    border-radius: 20px;
+}
+
+.user-btn {
+    padding: 5px;
+    color: #ffffff;
+    background: #1a1e2f;
+    border: 1px solid #1a1e2f;
+    border-radius: 8px;
+    width: 5rem;
+}

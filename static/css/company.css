@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.company-details {
+    height: 100%;
+    width: 78vw;
+    background: url(/static/images/company-bg.png);
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.details1 {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 10px;
+}
+.details2 {
+    padding-right: 10px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.company-logo {
+    height: 250px;
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.company-name {
+    font-size: 1.75rem;
+}
+
+.company-icon {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #1a1e2f;
+}
+
+.company-info {
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+.view-more {
+    padding: 10px;
+    color: #ffffff;
+    background: #1a1e2f;
+    border: 1px solid #1a1e2f;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px #ffffff;
+}

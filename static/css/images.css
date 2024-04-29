@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.images {
+    height: 90vh;
+    width: 73vw;
+    border-radius: 10px;
+    background-color: #e2e3e6;
+
+}
+
+.image-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding: 10px 40px;
+}
+
+.upload-img {
+    background-color: #1a1e2f;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #1a1e2f;
+    color: #ffffff;
+}
+
+.image-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* max-height: 200px;
+    overflow-y: auto ; */
+}
+
+.image-list-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: .8rem;
+    min-width: 720px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    position: relative;
+    top: 40;
+}
+
+
+.image-list-table thead tr {
+    background-color: #1a1e2f;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.image-list-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.image-list-table th, 
+.image-list-table td {
+    padding: 9px 10px;
+    font-size: 1rem;
+}
+
+.image-list-table td {
+    text-align: center;
+    background-color: #ffffff   ;
+
+}
+
+.image-list-table tbody tr {
+    border-bottom: 2px solid #1a1e2f;
+}
+
+.ceramic-image {
+    height: 3rem;
+    width: 3rem;
+}
+
+.my-chart { 
+        width: auto;
+}

@@ -4,12 +4,19 @@ import (
 	"net/http"
 	"strings"
 
-	// "github.com/uadmin/uadmin"
+	"github.com/uadmin/uadmin"
 )
 
 // Handler is used to handle/load pages
 func UserManagementHandler(w http.ResponseWriter, r *http.Request) map[string]interface{} {
 	c := map[string]interface{}{}
+	users := []uadmin.User{}
+
+	uadmin.All(&users)
+	for x := range users {
+		uadmin.Preload(&users[x])
+	}
+	c["Users"] = users
 
 	// Initialize Title and mapped it on the html file (you can check it if you want :)
 	c["Title"] = "User Management"
