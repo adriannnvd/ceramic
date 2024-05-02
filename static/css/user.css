@@ -20,7 +20,7 @@
     max-height: 765px;
     background-color: #e2e3e6;
     border-radius: 20px;
-    width: 72vw;
+    max-width: 73vw;
 }
 
 .user-btn {
@@ -42,4 +42,56 @@
 .head1 h3{
     font-size: 1.5rem;
 }
+
+.user-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* max-height: 200px;
+    overflow-y: auto ; */
+}
+
+.u-list-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: .8rem;
+    min-width: 720px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    position: relative;
+    top: 40;
+}
+
+
+.u-list-table thead tr {
+    background-color: #1a1e2f;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.u-list-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.u-list-table th, 
+.u-list-table td {
+    padding: 9px 10px;
+    font-size: 1rem;
+}
+
+.u-list-table td {
+    text-align: center;
+    background-color: #ffffff   ;
+    font-size: .8rem;
+
+}
+
+.u-list-table tbody tr {
+    border-bottom: 2px solid #1a1e2f;
+}
+
 
