@@ -30,6 +30,7 @@ type Ceramic struct {
 	Classification string `uadmin:"display_name:Classification"`
 	Image string `uadmin:"image"`
 	Date time.Time `uadmin:"display_name:Date Uploaded"`
+	MonthUploaded	string `uadmin:"list_exclude"`
 }
 
 func (i *Ceramic) Save() {
@@ -57,6 +58,7 @@ func (i *Ceramic) Save() {
 	}
 
 	i.Date = time.Now()
+	i.MonthUploaded = i.Date.Month().String()
 
 	// Save the model
 	uadmin.Save(i)

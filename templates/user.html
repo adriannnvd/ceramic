@@ -6,7 +6,7 @@
 
 <div class="user-management">
     <div class="user-management-list ">
-        <div class="user-label head">
+        <div class="user-label-head">
             <div class="head1">
                 <h3 class="label"><span class="bold">Users</span></h3>
             </div>
@@ -16,8 +16,8 @@
             </div>
             
         </div>
-        <div class="dash-table">
-            <table class="user-list-table">
+        <div class="image-table">
+            <table class="image-list-table">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -34,30 +34,30 @@
                 <tbody>
                     {{ range .Users }}
                     <tr>
-                        <td>{{ .ID }}</td>
-                        <td>
+                        <td class="user-td">{{ .ID }}</td>
+                        <td class="user-td">
                             <img src="{{ .Photo }}">
                         </td>
-                        <td>{{ .Username }}</td>
-                        <td>{{ .Email }}</td>
-                        <td>{{ .FirstName }}</td>
-                        <td>{{ .LastName }}</td>
-                        <td>{{ if  .Active }}
+                        <td class="user-td">{{ .Username }}</td>
+                        <td class="user-td">{{ .Email }}</td>
+                        <td class="user-td">{{ .FirstName }}</td>
+                        <td class="user-td">{{ .LastName }}</td>
+                        <td class="user-td">{{ if  .Active }}
                                 Active
                             {{else}}
                                 Not Active
                             {{end}}
                         </td>
-                        <td>
+                        <td class="user-td">
                             {{if .Admin}}
                                 <p class="red">Admin</p>
                             {{else}}
                                 <p class="green">Regular</p>
                             {{end}}
                         </td>
-                        <td>
+                        <td class="user-td">
                             <a href="#" class="btn-download btn-reset">
-                                <!-- <i class='bx bx-reset' ></i> -->
+                                <i class='bx bx-reset' ></i>
                                 <span class="text">Reset Password</span>
                             </a>
                         </td>
@@ -66,6 +66,56 @@
                 </tbody>
             </table>
         </div>
+        <!-- <div class="user-dash-table">
+            <table class="user-list-table">
+                <thead class="user-table-thead">
+                    <tr>
+                        <th>ID</th>
+                        <th>Photo</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Active</th>
+                        <th>Authority</th>
+                        <th>Reset Password</th>
+                    </tr>
+                </thead>
+                <tbody class="user-table-tbody">
+                    {{ range .Users }}
+                    <tr>
+                        <td class="user-td">{{ .ID }}</td>
+                        <td class="user-td">
+                            <img src="{{ .Photo }}">
+                        </td>
+                        <td class="user-td">{{ .Username }}</td>
+                        <td class="user-td">{{ .Email }}</td>
+                        <td class="user-td">{{ .FirstName }}</td>
+                        <td class="user-td">{{ .LastName }}</td>
+                        <td class="user-td">{{ if  .Active }}
+                                Active
+                            {{else}}
+                                Not Active
+                            {{end}}
+                        </td>
+                        <td class="user-td">
+                            {{if .Admin}}
+                                <p class="red">Admin</p>
+                            {{else}}
+                                <p class="green">Regular</p>
+                            {{end}}
+                        </td>
+                        <td class="user-td">
+                            <a href="#" class="btn-download btn-reset">
+                                <i class='bx bx-reset' ></i>
+                                <span class="text">Reset Password</span>
+                            </a>
+                        </td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        </div> -->
         
     </div>
 </div>

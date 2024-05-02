@@ -140,5 +140,43 @@
         </div>
     </div>
 </div>
+<script>
+    const xValues = ['{{ .ThirdPreviousMonth }}', '{{ .SecPreviousMonth }}', '{{ .PreviousMonth }}', '{{ .CurrentMonth }}'];
+const good = ['{{ .GoodTotalThirdMonth }}', '{{ .GoodTotalSecMonth }}', '{{ .GoodTotalPrevMonth }}', '{{ .GoodTotalCurrentMonth }}']; // First set of data
+const defect = ['{{ .DefectTotalThirdMonth }}', '{{ .DefectTotalSecMonth }}', '{{ .DefectTotalPrevMonth }}', '{{ .DefectTotalCurrentMonth }}' ];   // Second set of data
+const barColor1 = "green";
+const barColor2 = "red";
+
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [
+      {
+        label: 'Good', // Label for the first set of bars
+        backgroundColor: barColor1,
+        data: good
+      },
+      {
+        label: 'Defect', // Label for the second set of bars
+        backgroundColor: barColor2, // Use the same colors as the first set
+        data: defect
+      }
+    ]
+  },
+  options: {
+    legend: {
+      display: true,
+      position: 'bottom' // Place legend at the bottom
+    },
+    title: {
+      display: true,
+      text: "Ceramic Plate Classification Uploads"
+    }
+  }
+});
+
+</script>
 
 {{end}}

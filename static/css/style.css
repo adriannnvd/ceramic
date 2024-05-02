@@ -6,9 +6,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Odor Mean Chey", serif;
+    /* font-family: "Odor Mean Chey", serif;
     font-weight: 400;
-    font-style: normal;
+    font-style: normal; */
 }
 
 .container {
@@ -32,6 +32,11 @@
     align-items: center;
     gap: 2px;
     font-weight: bolder;
+}
+
+.ceramic-logo {
+  height: 130px;
+  width: 330px;
 }
 
 .profile {
@@ -105,9 +110,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 2rem;
     color: white;
     margin-bottom: 2rem;
+    text-align: center;
   }
 
 
